@@ -3,6 +3,7 @@ import numpy
 import minpy.numpy as np
 import minpy.numpy.random as npr
 
+
 # pylint: disable=no-member
 
 
@@ -30,7 +31,8 @@ def xavier(shape, _):
     else:
         fan_in = 0
     var = numpy.sqrt(6.0 / (fan_out + fan_in))
-    ret = npr.randn(*shape) * var
+    #    ret = npr.randn(*shape) * var
+    ret = npr.uniform(-var, var, shape=shape)
     return ret
 
 
