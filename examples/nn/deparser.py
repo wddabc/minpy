@@ -2,7 +2,7 @@
 # --------------------------------------- 
 # File Name : deparser.py
 # Creation Date : 08-03-2017
-# Last Modified : Sun Mar 12 19:22:17 2017
+# Last Modified : Sun Mar 12 19:50:52 2017
 # Created By : wdd 
 # --------------------------------------- 
 import minpy.numpy as np
@@ -312,7 +312,6 @@ class MySolver(Solver):
         grad_and_loss_func = core.grad_and_loss(
             loss_func, argnum=range(len(param_arrays)))
         grad_arrays, loss = grad_and_loss_func(*param_arrays)
-        print grad_arrays
         grads = dict(zip(param_keys, grad_arrays))
 
         # Perform a parameter update
